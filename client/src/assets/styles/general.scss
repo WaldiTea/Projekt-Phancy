@@ -1,0 +1,99 @@
+// ########## Global ##########
+@import "./variables.scss";
+
+@font-face {
+  font-family: Bouncy;
+  src: url(../fonts/Bouncy.otf);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-system;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+// ########## Common Classes ##########
+
+.section {
+  max-width: $section-width;
+  min-height: calc(100vh - $footer-height);
+  padding: 6rem 4rem 0;
+  margin: 0 auto;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fade 0.5s ease-in-out forwards;
+}
+
+// ########## Light Mode / Dark Mode ##########
+
+.light-theme-main {
+  background-color: $bg-light;
+  color: $black;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-theme-main {
+  background-color: $bg-dark;
+  color: $white;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.light-theme-nav {
+  background-color: $white;
+  color: $black;
+  transition: background-color 0.5s, color 0.5s, transform 0.3s;
+}
+
+.dark-theme-nav {
+  background-color: $black;
+  color: $white;
+  transition: background-color 0.5s, color 0.5s, transform 0.3s;
+}
+
+.light-theme-font {
+  color: $black;
+}
+
+.dark-theme-font {
+  color: $white;
+}
+
+.light-theme-hamburger-stroke {
+  stroke: $black;
+}
+
+.dark-theme-hamburger-stroke {
+  stroke: $white;
+}
+
+.light-theme-border {
+  border-color: $black;
+  transition: border-color 0.3s;
+}
+
+.dark-theme-border {
+  border-color: $white;
+  transition: border-color 0.3s;
+}

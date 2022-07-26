@@ -1,0 +1,58 @@
+@import "../../assets/styles/variables.scss";
+
+.picture-wrapper {
+  line-height: 0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  .overlay {
+    width: 100%;
+    height: 50px;
+    max-height: 0px;
+    display: grid;
+    padding: 8px;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 0.2s, max-height 0.2s;
+
+    &.top-overlay {
+      background: $overlay-bg;
+      border-radius: 0.5rem 0.5rem 0;
+      top: 0px;
+    }
+
+    .delete-btn {
+      width: fit-content;
+      height: fit-content;
+      background-color: $delete-btn;
+      color: #fff;
+      justify-self: end;
+      font-size: 0.9rem;
+      border: 2px solid $delete-btn;
+      border-radius: 0.3em;
+      padding: 0.25em;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $delete-btn-hover;
+        border-color: $delete-btn-hover;
+      }
+    }
+  }
+
+  &:hover > .top-overlay {
+    opacity: 1;
+    max-height: 50px;
+  }
+
+  .picture {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+  }
+}

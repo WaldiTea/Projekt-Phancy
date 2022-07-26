@@ -1,0 +1,34 @@
+// ########## General ##########
+@use "./general.scss";
+
+// ########## Navigation ##########
+@use "../../components/Navbar/Navbar.scss";
+@use "../../components/Navbar/Navigation.scss";
+@use "../../components/Navbar/Logo.scss";
+@use "../../components/Navbar/NavLinks.scss";
+@use "../../components/Navbar/MobileNavigation.scss";
+@use "../../components/Navbar/Hamburger.scss";
+
+// ########## InputForm ##########
+@use "../../components/Modal/Modal.scss";
+@use "../../components/InputForm/InputForm.scss";
+@use "../../components/InputForm/InputFile.scss";
+@use "../../components/InputForm/InputTag.scss";
+@use "../../components/InputForm/FormButtons.scss";
+
+// ########## Home Page ##########
+@use "../../pages/Home/Home.scss";
+@use "../../components/Loader/Loader.scss";
+@use "../../components/Post/Picture.scss";
+@use "../../components/Post/Post.scss";
+@use "../../components/Post/InputUpdate.scss";
+
+// ########## Other Pages ##########
+@use "../../pages/About/About.scss";
+@use "../../pages/ErrorPage/ErrorPage.scss";
+
+// ########## Rest ##########
+@use "../../components/Footer/Footer.scss";
+@use "./scrollbar.scss";
+@use "./keyframes.scss";
+@use "./mediaQueries.scss";

@@ -1,0 +1,30 @@
+.mobile-navigation {
+  display: flex;
+  transition: padding 0.5s;
+  position: relative;
+
+  &.unfold {
+    padding: 0 0 45px 0;
+  }
+
+  .mobile-links {
+    gap: 3rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: visibility 0.3s;
+
+    &.fade-out {
+      visibility: visible;
+      opacity: 0;
+      animation: fadeOut 0.5s ease-in-out forwards;
+    }
+
+    &.fade-in {
+      visibility: hidden;
+      opacity: 1;
+      animation: fadeIn 0.2s ease-in-out forwards;
+    }
+  }
+}

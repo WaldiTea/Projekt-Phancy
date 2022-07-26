@@ -1,0 +1,50 @@
+@import "../../assets/styles/variables.scss";
+
+.update-tag-form {
+  width: 100%;
+  background-color: $white;
+  display: grid;
+  gap: 0.5em;
+  font-size: 1rem;
+  padding: 1em;
+  border-radius: 0.5em;
+  position: absolute;
+  bottom: -65px;
+
+  .update-input {
+    font-size: 0.75rem;
+    padding: 0.5em;
+    border: 1px solid $black;
+    border-radius: 0.25em;
+    outline: none;
+  }
+
+  .btn {
+    color: $white;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.5rem;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.5em;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &.abbort-btn {
+      background-color: $delete-btn;
+
+      &:hover {
+        background-color: $delete-btn-hover;
+      }
+    }
+
+    &.update-btn {
+      background-color: $success-btn;
+
+      &:hover {
+        background-color: $success-btn-hover;
+      }
+    }
+  }
+}

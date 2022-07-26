@@ -1,0 +1,25 @@
+@import "../../assets/styles/variables.scss";
+
+.header {
+  width: 100%;
+  box-shadow: $header-shadow;
+  padding: 1.25rem;
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 1;
+
+  &.hide-nav {
+    transform: translateY(-100%);
+  }
+
+  &.show-nav {
+    transform: translateY(0);
+  }
+
+  .navbar {
+    max-width: 975px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+}

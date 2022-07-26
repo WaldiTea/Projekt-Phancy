@@ -1,0 +1,35 @@
+@import "../../assets/styles/variables.scss";
+
+.form-button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  .btn {
+    color: $white;
+    display: flex;
+    gap: 0.5em;
+    font-size: 1.25rem;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.5em;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &.abbort-btn {
+      background-color: $delete-btn;
+
+      &:hover {
+        background-color: $delete-btn-hover;
+      }
+    }
+
+    &.upload-btn {
+      background-color: $success-btn;
+
+      &:hover {
+        background-color: $success-btn-hover;
+      }
+    }
+  }
+}

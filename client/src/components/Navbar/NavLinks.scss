@@ -1,0 +1,57 @@
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  .link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    &:after {
+      font-size: 0.75rem;
+      position: absolute;
+      bottom: -15px;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    &:hover:after {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .icon {
+      width: 1.75rem;
+      height: 1.75rem;
+      transition: transform 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  .icon-home::after {
+    content: "Home";
+  }
+
+  .icon-upload::after {
+    content: "Upload";
+  }
+
+  .icon-about::after {
+    content: "About";
+  }
+
+  .icon-theme::after {
+    content: "Theme";
+  }
+}

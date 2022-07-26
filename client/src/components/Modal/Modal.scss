@@ -1,0 +1,23 @@
+@import "../../assets/styles/variables.scss";
+
+.modal-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: $modal-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+
+  &.fade-in {
+    opacity: 1;
+    animation: fadeIn 0.3s ease-in-out forwards;
+  }
+
+  &.fade-out {
+    opacity: 0;
+    animation: fadeOut 0.3s ease-in-out forwards;
+  }
+}
